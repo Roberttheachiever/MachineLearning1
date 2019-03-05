@@ -142,3 +142,11 @@ x <- matrix(rnorm(100*10), 100, 10)
 length(x[,1])
 length(x[1,])
 rowMeans(x)
+
+#Q6
+# get first 1000 predictors
+x <- mnist$train$images[1:60000,]
+
+# proportion of grays
+new_x <- x
+length(new_x[new_x > 50 & new_x < 205])/length(new_x)
